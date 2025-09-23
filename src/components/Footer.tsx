@@ -1,5 +1,4 @@
 import { Facebook, Youtube, Instagram, ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import vermijlLogo from "@/assets/vermijl-logo.png";
 
 export const Footer = () => {
@@ -8,66 +7,66 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark-navy border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-grid">
           {/* Logo & Description */}
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <img src={vermijlLogo} alt="Vermijl Car Detail" className="h-10 w-auto" />
-              <div className="text-lg font-bold text-primary">
+          <div className="footer-main">
+            <div className="footer-logo">
+              <img src={vermijlLogo} alt="Vermijl Car Detail" className="footer-logo-image" />
+              <div className="footer-logo-text">
                 VERMIJL
-                <span className="text-sm block text-muted-foreground tracking-wide">CAR DETAIL</span>
+                <span className="footer-logo-subtitle">CAR DETAIL</span>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
+            <p className="footer-description">
               Professionele auto detailing diensten in Limburg. Van interieur reiniging tot keramische coatings - 
               wij brengen jouw auto terug in showroomstaat.
             </p>
-            <div className="flex space-x-4">
+            <div className="footer-social">
               <a 
                 href="https://facebook.com/vermijlcardetail" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="social-link"
                 aria-label="Facebook"
               >
-                <Facebook className="h-6 w-6" />
+                <Facebook className="social-icon-large" />
               </a>
               <a 
                 href="https://youtube.com/vermijlcardetail" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="social-link"
                 aria-label="YouTube"
               >
-                <Youtube className="h-6 w-6" />
+                <Youtube className="social-icon-large" />
               </a>
               <a 
                 href="https://instagram.com/vermijlcardetail" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="social-link"
                 aria-label="Instagram"
               >
-                <Instagram className="h-6 w-6" />
+                <Instagram className="social-icon-large" />
               </a>
             </div>
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Diensten</h4>
-            <ul className="space-y-2">
-              <li><a href="#interieur" className="text-muted-foreground hover:text-primary transition-colors">Interieur reiniging</a></li>
-              <li><a href="#polijsten" className="text-muted-foreground hover:text-primary transition-colors">Polijsten</a></li>
-              <li><a href="#coating" className="text-muted-foreground hover:text-primary transition-colors">Keramische coating</a></li>
-              <li><a href="#wasbeurt" className="text-muted-foreground hover:text-primary transition-colors">Premium wasbeurt</a></li>
+          <div className="footer-column">
+            <h4 className="footer-title">Diensten</h4>
+            <ul className="footer-links">
+              <li><a href="#interieur" className="footer-link">Interieur reiniging</a></li>
+              <li><a href="#polijsten" className="footer-link">Polijsten</a></li>
+              <li><a href="#coating" className="footer-link">Keramische coating</a></li>
+              <li><a href="#wasbeurt" className="footer-link">Premium wasbeurt</a></li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Contact</h4>
-            <div className="space-y-2 text-muted-foreground">
+          <div className="footer-column">
+            <h4 className="footer-title">Contact</h4>
+            <div className="footer-contact">
               <p>Toekomststraat 6E</p>
               <p>3960 Bree, België</p>
-              <p className="mt-4">
-                <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">
+              <p className="footer-contact-link">
+                <a href="#contact" className="footer-primary-link">
                   Contact opnemen
                 </a>
               </p>
@@ -76,20 +75,18 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
+        <div className="footer-bottom">
+          <p className="footer-copyright">
             © 2025 Vermijl Car Detail. Alle rechten voorbehouden.
           </p>
           
-          <Button
-            variant="ghost"
-            size="sm"
+          <button
             onClick={scrollToTop}
-            className="text-muted-foreground hover:text-primary"
+            className="footer-back-to-top"
           >
-            <ArrowUp className="h-4 w-4 mr-2" />
+            <ArrowUp className="back-to-top-icon" />
             Terug naar boven
-          </Button>
+          </button>
         </div>
       </div>
     </footer>

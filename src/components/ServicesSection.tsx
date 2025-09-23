@@ -1,6 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
 const services = [
   {
     title: "Interieur reiniging",
@@ -26,14 +23,14 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="diensten" className="py-20 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="diensten" className="section services-section">
+      <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
+        <div className="services-header">
+          <h2 className="section-title">
             Cardetailingdiensten
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="services-description">
             Door gebruik te maken van de beste materialen, producten en technieken kunnen wij het allerbeste 
             resultaat behalen. Of je nu kiest voor een auto coating, polijstbehandeling, interieurreiniging 
             of een andere detailing service, bij Vermijl Car Detail wordt jouw auto met de grootste zorg behandeld.
@@ -41,27 +38,27 @@ export const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="services-grid">
           {services.map((service, index) => (
-            <Card key={index} className="service-card group">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-2xl">{service.icon}</span>
+            <div key={index} className="service-card">
+              <div className="service-header">
+                <div className="service-icon-container">
+                  <span className="service-icon">{service.icon}</span>
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">{service.description}</p>
-              </CardContent>
-            </Card>
+                <h3 className="service-title">{service.title}</h3>
+              </div>
+              <div className="service-content">
+                <p className="service-description">{service.description}</p>
+              </div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center">
-          <Button className="cta-primary text-lg">
+        <div className="services-cta">
+          <a href="#diensten" className="cta-primary">
             Bekijk alle diensten
-          </Button>
+          </a>
         </div>
       </div>
     </section>
