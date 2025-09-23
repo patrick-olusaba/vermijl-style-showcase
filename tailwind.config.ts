@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Automotive theme colors
+        navy: "hsl(var(--navy))",
+        "dark-navy": "hsl(var(--dark-navy))",
+        "cyan-glow": "hsl(var(--cyan-glow))",
+        steel: "hsl(var(--steel))",
+        platinum: "hsl(var(--platinum))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +86,15 @@ export default {
             height: "0",
           },
         },
+        "scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll": "scroll 30s linear infinite",
       },
     },
   },
